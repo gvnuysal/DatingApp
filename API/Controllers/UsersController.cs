@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using API.Data;
 using API.Entitites;
@@ -28,6 +27,5 @@ namespace API.Controllers
           {
                return await _context.Users.FindAsync(id);
           }
-
      }
 }
