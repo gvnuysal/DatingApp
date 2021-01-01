@@ -1,4 +1,6 @@
 using API.Data;
+using API.Interfaces;
+using API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +21,7 @@ namespace API
           // This method gets called by the runtime. Use this method to add services to the container.
           public void ConfigureServices(IServiceCollection services)
           {
+               services.AddTransient<ITokenService,TokenService>();
                services.AddDbContext<DataContext>(options =>
                {
                     options.UseSqlite(_config.GetConnectionString("DefaultConnection"));//sql lite connection strings
