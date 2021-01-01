@@ -34,7 +34,7 @@ namespace API.Extensions
                            Scheme = "Bearer",
                            BearerFormat = "JWT",
                            In = ParameterLocation.Header,
-                           Description = ""
+                           Description = "",                           
                       });
 
                       options.AddSecurityRequirement(new OpenApiSecurityRequirement{
