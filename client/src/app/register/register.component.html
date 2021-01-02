@@ -10,17 +10,27 @@
       placeholder="Username"
       autocomplete="off"
     />
-   
   </div>
   <div class="form-group">
-     <input
-     type="password"
-     class="form-control"
-     name="password"
-     [(ngModel)]="model.password"
-     placeholder="Password"
-     autocomplete="off"
-   />
+    <label>What is your favourite users?</label>
+    <select class="form-control">
+      <option
+        *ngFor="let user of usersFromHomecomponet"
+        [value]="user.userName"
+      >
+        {{ user.userName }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      class="form-control"
+      name="password"
+      [(ngModel)]="model.password"
+      placeholder="Password"
+      autocomplete="off"
+    />
   </div>
   <div class="form-group text-center">
     <button class="btn btn-success mr-2" type="submit">Register</button>
