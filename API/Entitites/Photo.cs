@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace API.Entitites
 {
+     [Table("Photos")]
      public class Photo
      {
           public int Id { get; set; }
@@ -9,6 +12,10 @@ namespace API.Entitites
           public bool IsMain { get; set; }
           
           public string PublicId { get; set; }
+          public AppUser AppUser { get; set; }
+          
+          public int AppUserId { get; set; }
+          
           
           
      }
