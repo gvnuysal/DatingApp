@@ -7,6 +7,8 @@ namespace API.DTOs
     {
           public int Id { get; set; }
           public string UserName { get; set; }
+          public string PhotoUrl { get; set; }          
+          public int Age{get;set;}
           public byte[] PasswordHash { get; set; }
           public byte[] PasswordSalt { get; set; }
           public DateTime DateOfBirth { get; set; }
@@ -19,7 +21,7 @@ namespace API.DTOs
           public string Interests { get; set; }
           public string City { get; set; }
           public string Country { get; set; }
-          public ICollection<PhotoDto> Photo { get; set; }
+          public ICollection<PhotoDto> Photos { get; set; }
           
           
     }
