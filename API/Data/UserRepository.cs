@@ -28,7 +28,20 @@ namespace API.Data
                                     .Select(user => new MemberDto
                                     {
                                          Id = user.Id,
-                                         UserName = user.UserName
+                                         UserName = user.UserName,
+                                         Age=user.Age,
+                                         City=user.City,
+                                         Country=user.Country,
+                                         Created=user.Created,
+                                         DateOfBirth=user.DateOfBirth,
+                                         Gender=user.Gender,
+                                         Interests=user.Interests,
+                                         Introduction=user.Introduction,
+                                         KnownAs=user.KnownAs,
+                                         LastActive=user.LastActive,
+                                         LookingFor=user.LookingFor,
+                                         Photos=user.Photos,
+                                         PhotoUrl=user.PhotoUrl
                                     }).SingleOrDefaultAsync();
           }
 

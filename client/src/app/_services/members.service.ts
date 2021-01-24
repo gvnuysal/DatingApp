@@ -1,7 +1,5 @@
 import {
-  HttpClient,
-  HttpHeaders,
-  JsonpClientBackend,
+  HttpClient
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -21,6 +19,6 @@ export class MembersService {
     return this.http.get<Array<Member>>(this.baseurl + 'users');
   }
   getMember(username){
-    return this.http.get<Member>(this.baseurl+'user/'+username);
+    return this.http.get<Member>(this.baseurl+'users/'+username);
   }
 }
