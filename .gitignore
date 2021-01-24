@@ -445,3 +445,4 @@ appsettings.Development.json
 datingapp.db
 *.crt
 *.key
+Student*
